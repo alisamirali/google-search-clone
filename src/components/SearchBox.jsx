@@ -10,12 +10,12 @@ import { useState } from "react";
 export default function SearchBox() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const searchTerm = searchParams.get("searchTerm");
-  const [term, setTerm] = useState(searchTerm || "");
+  const searchValue = searchParams.get("searchValue");
+  const [term, setTerm] = useState(searchValue || "");
   function handleSubmit(e) {
     e.preventDefault();
     if (!term.trim()) return;
-    router.push(`/search/web?searchTerm=${term}`);
+    router.push(`/search/web?searchValue=${term}`);
   }
   return (
     <form

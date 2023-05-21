@@ -7,15 +7,15 @@ export default function SearchHeaderOptions() {
   const pathname = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
-  const searchTerm = searchParams.get("searchTerm");
+  const searchValue = searchParams.get("searchValue");
 
   function selectTab(tab) {
     if (tab === "Images") {
-      router.push(`/search/image?searchTerm=${searchTerm}`);
+      router.push(`/search/image?searchValue=${searchValue}`);
     } else if (tab === "All") {
-      router.push(`/search/web?searchTerm=${searchTerm}`);
+      router.push(`/search/web?searchValue=${searchValue}`);
     } else if (tab === "Videos") {
-      router.push(`/search/video?searchTerm=${searchTerm}`);
+      router.push(`/search/video?searchValue=${searchValue}`);
     }
   }
 
