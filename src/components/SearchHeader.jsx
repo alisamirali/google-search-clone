@@ -24,13 +24,6 @@ export default function SearchHeader() {
           <RiSettings3Line className="header-icon" />
           <TbGridDots className="header-icon" />
         </div>
-        {/* <Link
-          href="https://linktr.ee/AliSamir"
-          target="_blank"
-          className="bg-blue-500 text-white px-4 py-2 font-medium rounded-md hover:brightness-105 hover:shadow-md transition-shadow"
-        >
-          Follow Me
-        </Link> */}
       </div>
       <SearchHeaderOptions />
     </header>
